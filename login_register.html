@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medication Disposal App - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11d45f",
+              "background-light": "#f6f8f7",
+              "background-dark": "#102217",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="w-full max-w-md px-4 py-8">
+<div class="flex justify-center items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl">
+                    recycling
+                </span>
+<p class="text-xl font-bold text-gray-800 dark:text-gray-200">SafeMeds</p>
+</div>
+<h1 class="text-gray-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center pb-2 pt-6">Create Your Account</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal pb-6 text-center">We'll send a one-time password to your email.</p>
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-gray-200 dark:bg-background-dark/80 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-gray-900 dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<span class="truncate">Sign up</span>
+<input checked="" class="invisible w-0" name="auth-mode" type="radio" value="Sign up"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-gray-900 dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<span class="truncate">Login</span>
+<input class="invisible w-0" name="auth-mode" type="radio" value="Login"/>
+</label>
+</div>
+</div>
+<div class="flex w-full flex-wrap items-end gap-4 px-4 py-3">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">Username</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-all" placeholder="Enter your username" value=""/>
+</label>
+</div>
+<div class="flex w-full flex-wrap items-end gap-4 px-4 pt-0 pb-3">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">Email Address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-all" placeholder="Enter your email" value=""/>
+</label>
+</div>
+<div class="px-4 py-3">
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-3">Enter OTP</p>
+<div class="flex justify-center">
+<fieldset class="relative flex gap-2 sm:gap-4">
+<input class="flex h-14 w-12 text-center text-lg font-semibold text-gray-900 dark:text-white [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary/50 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" max="9" maxlength="1" min="0" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="number"/>
+<input class="flex h-14 w-12 text-center text-lg font-semibold text-gray-900 dark:text-white [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary/50 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" max="9" maxlength="1" min="0" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="number"/>
+<input class="flex h-14 w-12 text-center text-lg font-semibold text-gray-900 dark:text-white [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary/50 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" max="9" maxlength="1" min="0" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="number"/>
+<input class="flex h-14 w-12 text-center text-lg font-semibold text-gray-900 dark:text-white [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary/50 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" max="9" maxlength="1" min="0" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="number"/>
+<input class="flex h-14 w-12 text-center text-lg font-semibold text-gray-900 dark:text-white [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary/50 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" max="9" maxlength="1" min="0" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="number"/>
+<input class="flex h-14 w-12 text-center text-lg font-semibold text-gray-900 dark:text-white [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary/50 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" max="9" maxlength="1" min="0" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="number"/>
+</fieldset>
+</div>
+<div class="text-center mt-3">
+<button class="text-sm font-medium text-primary hover:underline">Resend OTP</button>
+</div>
+</div>
+<div class="px-4 py-3 mt-2">
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-3">I am a...</p>
+<div class="flex items-center gap-6">
+<label class="flex items-center cursor-pointer">
+<input checked="" class="form-radio h-5 w-5 text-primary focus:ring-primary/50 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:checked:bg-primary" name="role" type="radio" value="user"/>
+<span class="ml-2 text-gray-800 dark:text-gray-200">User</span>
+</label>
+<label class="flex items-center cursor-pointer">
+<input class="form-radio h-5 w-5 text-primary focus:ring-primary/50 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:checked:bg-primary" name="role" type="radio" value="pharmacy"/>
+<span class="ml-2 text-gray-800 dark:text-gray-200">Pharmacy</span>
+</label>
+<label class="flex items-center cursor-pointer">
+<input class="form-radio h-5 w-5 text-primary focus:ring-primary/50 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:checked:bg-primary" name="role" type="radio" value="authority"/>
+<span class="ml-2 text-gray-800 dark:text-gray-200">Authority</span>
+</label>
+</div>
+</div>
+<div class="px-4 py-3 mt-6">
+  <button id="create-account-btn" class="flex items-center justify-center w-full h-14 px-6 py-4 text-base font-medium leading-normal text-white bg-primary rounded-xl hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all">Create Account</button>
+</div>
+
+<!-- Login section (hidden by default) is inserted below -->
+<div id="login-section" style="display:none;">
+  <div class="flex w-full flex-wrap items-end gap-4 px-4 py-3">
+    <label class="flex flex-col min-w-40 flex-1">
+      <p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">Email or Username</p>
+      <input id="login-identifier" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-all" placeholder="Enter your email or username" value=""/>
+    </label>
+  </div>
+  <div class="flex w-full flex-wrap items-end gap-4 px-4 pt-0 pb-3">
+    <label class="flex flex-col min-w-40 flex-1">
+      <p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">Password</p>
+      <input id="login-password" type="password" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-all" placeholder="Enter your password" value=""/>
+    </label>
+  </div>
+  <div class="px-4 py-3 mt-2 text-right">
+    <a href="#" class="text-sm font-medium text-primary hover:underline">Forgot password?</a>
+  </div>
+  <div class="px-4 py-3 mt-6">
+    <button id="login-btn" class="flex items-center justify-center w-full h-14 px-6 py-4 text-base font-medium leading-normal text-white bg-primary rounded-xl hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all">Login</button>
+  </div>
+</div>
+
+<p class="text-center text-xs text-gray-500 dark:text-gray-400 mt-4 px-4">By continuing, you agree to our <a class="font-medium text-primary hover:underline" href="#">Terms of Service</a> &amp; <a class="font-medium text-primary hover:underline" href="#">Privacy Policy</a>.</p>
+</div>
+</div>
+
+<script>
+// Toggle between signup and login sections (radio inputs are the toggles)
+(function(){
+  const radios = document.getElementsByName('auth-mode');
+  const signupSection = document.getElementById('signup-section');
+  const loginSection = document.getElementById('login-section');
+  const title = document.getElementById('auth-title') || document.querySelector('h1');
+
+  function updateView(){
+    const val = Array.from(radios).find(r=>r.checked)?.value || 'Sign up';
+    if(val === 'Login'){
+      signupSection && (signupSection.style.display = 'none');
+      loginSection && (loginSection.style.display = 'block');
+      if(title) title.textContent = 'Welcome Back';
+    } else {
+      signupSection && (signupSection.style.display = 'block');
+      loginSection && (loginSection.style.display = 'none');
+      if(title) title.textContent = 'Create Your Account';
+    }
+  }
+
+  radios.forEach(r=>r.addEventListener('change', updateView));
+  updateView();
+
+  // Demo button behaviour: navigate to home or onboarding inside mockup
+  const loginBtn = document.getElementById('login-btn');
+  const createBtn = document.getElementById('create-account-btn');
+  if(loginBtn) loginBtn.addEventListener('click', ()=>{
+    try{ if(window.parent && typeof window.parent.loadPage === 'function') window.parent.loadPage('home.html'); else window.location.href='home.html'; }catch(e){ window.location.href='home.html'; }
+  });
+  if(createBtn) createBtn.addEventListener('click', ()=>{
+    try{ if(window.parent && typeof window.parent.loadPage === 'function') window.parent.loadPage('onboarding-1.html'); else window.location.href='onboarding-1.html'; }catch(e){ window.location.href='onboarding-1.html'; }
+  });
+})();
+</script>
+
+</body></html>

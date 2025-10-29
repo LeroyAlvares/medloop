@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medication Scanner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2D8A5B", // Custom Green from user request
+            "text-primary": "#2F3C4F", // Custom Dark Blue/Charcoal from user request
+            "text-secondary": "#618971", // From provided component
+            "warning": "#FFBF00", // Custom Amber from user request
+            "background-light": "#F8F9FA", // Custom Off-white from user request
+            "background-dark": "#102217", // Using provided dark theme
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-[100dvh] w-full flex-col bg-black group/design-root overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A blurred background image of a pharmacy shelf to simulate a camera view." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBwjFn6UALeqA95_nQm2A6oDotKT19Q2j-MSPa9xx_Rkzqa5XpNakljYs7KCmfyhuxF800c2N4H_542NnLeaucNwphT9rypm22IKdIjMbhBMMZ8grtzGhOc8ntNRZkLl4EW2OKLW82ydcRe2tT3RFft4uB5rjlrMKXMj7KMynf7NUCxJ69V_yDZ5YV-fOZhDgKzNRBlHreqgVrggiY_DrEBBuj6PBJXYGkCTuZDvEYg85l6AfmjynyzA_o6CY0NDl8Y4FNH4-qbKg1');"></div>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute top-0 left-0 right-0 z-20 flex items-center p-4">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full bg-black/40 text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="flex-1 pr-10 text-center text-lg font-bold tracking-tight text-white">Scan Medication</h2>
+</div>
+<div class="relative z-10 flex flex-1 flex-col items-center justify-center p-6 text-center text-white">
+<div class="relative mb-4 h-48 w-full max-w-sm rounded-xl border-2 border-dashed border-white/50">
+<div class="absolute -top-3 left-1/2 h-1 w-12 -translate-x-1/2 bg-white/50"></div>
+<div class="absolute -bottom-3 left-1/2 h-1 w-12 -translate-x-1/2 bg-white/50"></div>
+<div class="absolute -left-3 top-1/2 h-12 w-1 -translate-y-1/2 bg-white/50"></div>
+<div class="absolute -right-3 top-1/2 h-12 w-1 -translate-y-1/2 bg-white/50"></div>
+</div>
+<p class="max-w-xs text-base font-medium">Align barcode within the frame</p>
+</div>
+<div class="absolute bottom-28 left-0 right-0 z-10 p-4 text-center">
+<button class="text-sm font-semibold text-white underline">Can't scan? Enter manually</button>
+</div>
+<div class="absolute inset-0 z-30 flex flex-col justify-end bg-[#141414]/40">
+<div class="flex flex-col rounded-t-xl bg-background-light dark:bg-background-dark">
+<div class="flex h-5 w-full items-center justify-center pt-3">
+<div class="h-1 w-9 rounded-full bg-[#dbe6df] dark:bg-gray-700"></div>
+</div>
+<div class="flex-1 px-4 pb-4 pt-2">
+<div class="flex items-center justify-between pb-3 pt-4">
+<h2 class="text-text-primary dark:text-white text-[28px] font-bold leading-tight tracking-tight">Scan Medicine</h2>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-text-primary dark:text-white">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="grid grid-cols-[35%_1fr] gap-x-4">
+<div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dbe6df] dark:border-t-gray-700 py-4">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">Expiry Date</p>
+<p class="text-text-primary dark:text-white text-sm font-semibold leading-normal">--/--/----</p>
+</div>
+<div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dbe6df] dark:border-t-gray-700 py-4">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">Disposal Method</p>
+<p class="text-text-primary dark:text-white text-sm font-normal leading-normal">----</p>
+</div>
+</div>
+<div class="mt-6 mb-2">
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 text-base font-bold text-white shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined">location_on</span>
+              Locate Drop Point
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

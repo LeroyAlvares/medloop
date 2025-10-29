@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medication Disposal Locations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2D8A5B",
+            "secondary": "#F0F2F5",
+            "accent": "#FFA500",
+            "background-light": "#f6f8f7",
+            "background-dark": "#102217",
+            "text-light": "#333333",
+            "text-dark": "#E0E0E0",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+<!-- Map Background -->
+<div class="absolute inset-0 h-full w-full">
+<div class="bg-cover bg-center h-full w-full" data-alt="A stylized map of a city with streets and buildings." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCag460Ifx1wMlucMfOJgTNdWKxwa39l_sN-3KqDClSaNowktjcr-ICn7sdME8rJ9_xqd_LyVD-cmBim3PrEobKBp4nEo63NZylm50zAsoPtfNlYpfm3oquDaXhBHIHPnhBJHpMSnTKKUHsy_semLat4S19cF0rpCyo2mpVxugg1R_3MG0-_hoGIKjODZzvhY02BHT8Zr6YKWAdHmhEPgyGLErCxg1kdusbOkTGjD-hhwfINY9OyHAIA7ND1U3tixf1KOnBY5yMmjP-');">
+<!-- Location Pins: Example of how pins could be placed -->
+<div class="absolute" style="top: 30%; left: 40%;">
+<div class="flex flex-col items-center justify-center">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary shadow-lg">
+<span class="material-symbols-outlined text-white text-2xl">local_pharmacy</span>
+</div>
+<div class="w-2 h-2 -mt-1 bg-primary/50 rounded-full shadow-lg"></div>
+</div>
+</div>
+<div class="absolute" style="top: 55%; left: 60%;">
+<div class="flex flex-col items-center justify-center">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary shadow-lg">
+<span class="material-symbols-outlined text-white text-2xl">local_hospital</span>
+</div>
+<div class="w-2 h-2 -mt-1 bg-primary/50 rounded-full shadow-lg"></div>
+</div>
+</div>
+<div class="absolute" style="top: 45%; left: 25%;">
+<div class="flex flex-col items-center justify-center">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary shadow-lg">
+<span class="material-symbols-outlined text-white text-2xl">recycling</span>
+</div>
+<div class="w-2 h-2 -mt-1 bg-primary/50 rounded-full shadow-lg"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- UI Overlay -->
+<div class="relative flex flex-col h-full w-full justify-between p-4 sm:p-6">
+<!-- Top Section: Search and Filters -->
+<div class="flex flex-col gap-3">
+<!-- Search Bar -->
+<div class="w-full">
+<label class="flex flex-col min-w-40 h-12 shadow-lg rounded-lg">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="flex items-center justify-center pl-4 rounded-l-lg border-r-0 bg-white dark:bg-gray-800 text-text-light dark:text-text-dark/80">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border-none h-full placeholder:text-gray-400 dark:placeholder:text-gray-500 px-4 text-base font-normal leading-normal" placeholder="Search for an address or place" value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4">
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary pl-3 pr-4 shadow">
+<span class="material-symbols-outlined text-white text-lg">local_pharmacy</span>
+<p class="text-white text-sm font-medium leading-normal">Pharmacy</p>
+</div>
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 pl-3 pr-4 shadow">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark/80 text-lg">recycling</span>
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Community Bin</p>
+</div>
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 pl-3 pr-4 shadow">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark/80 text-lg">local_hospital</span>
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Hospital</p>
+</div>
+</div>
+</div>
+<!-- Map Controls: Recenter -->
+<div class="absolute right-4 sm:right-6" style="top: 50%; transform: translateY(-50%);">
+<button class="flex size-12 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-white dark:bg-gray-800 text-text-light dark:text-text-dark shadow-lg">
+<span class="material-symbols-outlined text-2xl">my_location</span>
+</button>
+</div>
+<!-- Bottom Section: Info Modal -->
+<div class="flex flex-col gap-4">
+<!-- Location Info Modal -->
+<div class="w-full max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 sm:p-5 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-xs font-semibold uppercase text-primary">HOSPITAL</p>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">City General Hospital</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">123 Health St, Medville, ST 12345</p>
+</div>
+<div class="w-full border-t border-gray-200 dark:border-gray-700"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">schedule</span>
+<p class="text-sm text-text-light dark:text-text-dark">Open 24 Hours</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary/20 text-primary dark:bg-primary/30 dark:text-primary-light text-base font-bold leading-normal tracking-[0.015em]">
+<span>Get Directions</span>
+</button>
+</div>
+<!-- Primary CTA Button -->
+<div class="flex justify-center w-full max-w-lg mx-auto">
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg">
+<span class="truncate">Schedule Pickup</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

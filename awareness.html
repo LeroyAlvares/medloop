@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>One Health Awareness Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d45f",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102217",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-800">
+<button class="text-[#111814] dark:text-gray-200 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-[#111814] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">One Health Awareness Hub</h1>
+</header>
+<main class="flex-grow">
+<!-- Header Image -->
+<div class="@container px-4 pt-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-[200px] p-6 relative" data-alt="Stylized illustration showing interconnected icons of people, animals, and plants inside a circle, representing the One Health concept." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCo6FACAMSSwMuM-VHss7ZGjfBD8qi9JSYnBybz4IO1KfIOAtjmbf5VUjN53Cb700cLqgB-f-MK3nc10ZrSE2qnqJSBEeqo2tQ3fyY-e0M3SR5V7vpH-XysShhvfBrh_kvRz8368ft9Tz1wVQDI2PZpM-L8OCbBqvGlONr3O-H_xCxhPs-0QLpWBFljtMRJIYyaVqRe_dYYcSsZN0F2JvqCRLAeu7-zAZWFyBz3qVT8usKnzioywElGVitAojzj9lLPYJZOYENMpOV-");'>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative z-10">
+<h2 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Protect Our World</h2>
+<p class="text-white/90 text-base font-normal leading-normal max-w-sm">One action can protect the health of people, animals, and our environment.</p>
+</div>
+</div>
+</div>
+<!-- Body Text -->
+<p class="text-[#111814] dark:text-gray-300 text-base font-normal leading-normal pt-4 px-4">Discover how proper medication disposal protects us all.</p>
+<!-- Information Cards Section -->
+<div class="flex flex-col gap-4 p-4">
+<!-- Card 1: What is AMR? -->
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Microscopic view of bacteria on a petri dish, illustrating antimicrobial resistance." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZ36pKyU7ZsdR-h4_nEHz4mObi8XDuY73EoSwRMRvdLqYZXy932bRuxFZROseU8QoYFDEAoAQZ9oVfClclb6-OfvTUmvOM47BTOA2rZaL0eTEOUPh0o4siPZNGphdZU8Owp27zlXMwWft8_ZbIlbee_bCp5xjgpoVYJUnHbjQ6FaF6xxCxttscE0TN54ne6xSMboCW-Ge_5auScHOvhNsy9raxY-OMA7eCNRAQhGfPTH93qaweSoOJ10h4_ulD0D569ImjyqQaRZ37");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-[#111814] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">What is AMR?</p>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Learn about the threat of superbugs from the improper disposal of antibiotics.</p>
+<div class="flex items-center gap-2 text-primary dark:text-green-400 text-sm font-medium mt-1">
+<span class="material-symbols-outlined text-base">quiz</span>
+<span>Take Quiz</span>
+</div>
+<div class="flex items-end gap-3 justify-between mt-2">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal hover:bg-opacity-90 transition-all">
+<span class="truncate">Learn More</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Safe Disposal Methods -->
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A person dropping medication into a designated disposal bin at a pharmacy." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMYJip5XrmAZUljpsHgmVFhvumtwcPE-eiQI5SWMT6Oy5JD9bqSY4Z-7_l04wribiJM8i_5mh4sH60dJw8D2kUUrl1pNduPSPzBi0EyQ2FZMDEJCxS84BvEI_Q4iKPYSVuQT5t6vvtsQm5I6YGC6oUao5KLHAQFha2t0cWZIi39UgtxQstWk8zBa2Jsep1p1rkekv154Wxi9EwcuJ6GN_RPgL-j_B-M9vwbdHoirV41qY-kQOkeJpJqDJ_XPCXDdmg_hCKFd6rVgps");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-[#111814] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Safe Disposal Methods</p>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Find out why flushing or trashing meds can be harmful to our environment and health.</p>
+<div class="flex items-center gap-2 text-primary dark:text-green-400 text-sm font-medium mt-1">
+<span class="material-symbols-outlined text-base">play_circle</span>
+<span>Play Video</span>
+</div>
+<div class="flex items-end gap-3 justify-between mt-2">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal hover:bg-opacity-90 transition-all">
+<span class="truncate">Learn More</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Impact on Wildlife -->
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-zinc-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A fish swimming in clear water, symbolizing aquatic life." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0XlqSkR4eVHXSUxsGvmhKHCIRYiQ4r6YALsy0aBeLJ87MBospr6tnrI1dqsdO2HBQOFr-WrK-PTGdQcDGN_TkfP5bj2P254PExWZBP2hYp80DA-xE41lxkALqXkHKD8QTJ-JR44mHfBOSElK3WV-QudBtodT-0FVFGto0jghYghOkE51k-jqBlPlpjyrvqMLOuPgDT_uUnt1sjJ7SZK87jvMmK1M9BpDwgMtLp8qgxqVEdOxcmb4BfanverI3t2e7Ndt6OWHRuPOY");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-[#111814] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Impact on Wildlife &amp; Environment</p>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">See how medication contaminates water sources and affects animals.</p>
+<div class="flex items-center gap-2 text-primary dark:text-green-400 text-sm font-medium mt-1">
+<span class="material-symbols-outlined text-base">play_circle</span>
+<span>Play Video</span>
+</div>
+<div class="flex items-end gap-3 justify-between mt-2">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal hover:bg-opacity-90 transition-all">
+<span class="truncate">Learn More</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 z-10 flex items-center justify-around bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 py-2">
+<a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">eco</span>
+<span class="text-xs font-medium">Hub</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Find</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-xs font-medium">History</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>
